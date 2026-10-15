@@ -1,0 +1,30 @@
+/// One attempt to collect a payment. Shares the table of the Laravel package.
+model BdpaygatePayment {
+  id                   String    @id @db.Char(26)
+  gateway              String    @db.VarChar(32)
+  reference            String    @db.VarChar(64)
+  gatewayReference     String    @map("gateway_reference") @db.VarChar(64)
+  gatewayPaymentId     String?   @map("gateway_payment_id") @db.VarChar(128)
+  gatewayTransactionId String?   @map("gateway_transaction_id") @db.VarChar(128)
+  amount               Decimal   @db.Decimal(12, 2)
+  refundedAmount       Decimal   @default(0) @map("refunded_amount") @db.Decimal(12, 2)
+  currency             String    @default("BDT") @db.VarChar(3)
+  status               String    @db.VarChar(24)
+  requiresReview       Boolean   @default(false) @map("requires_review")
+  failureReason        String?   @map("failure_reason") @db.VarChar(255)
+  description          String?   @db.VarChar(255)
+  checkoutUrl          String?   @map("checkout_url") @db.Text
+  customer             Json?
+  meta                 Json?
+  gatewayResponse      Json?     @map("gateway_response")
+  paidAt               DateTime? @map("paid_at") @db.Timestamp(0)
+  createdAt            DateTime? @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt            DateTime? @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  @@unique([gateway, gatewayReference])
+  @@index([gateway, reference])
+  @@index([gatewayPaymentId])
+  @@index([gatewayTransactionId])
+  @@index([status])
+  @@map("bdpaygate_payments")
+}

@@ -1,0 +1,316 @@
+{
+  "name": "bdpaygate",
+  "version": "0.1.0",
+  "description": "Bangladeshi payment gateways for Node.js, Bun, Deno and the edge: bKash, Nagad, SSLCommerz, Upay, ShurjoPay, aamarPay, PortPos, PayStation, UddoktaPay, Moneybag, EPS and DGePay behind one typed API, with verified callbacks, refunds and adapters for Express, Next.js, NestJS, Fastify, Hono, Koa, Nuxt, SvelteKit, React Router, Astro and AdonisJS.",
+  "keywords": [
+    "bkash",
+    "nagad",
+    "sslcommerz",
+    "upay",
+    "shurjopay",
+    "aamarpay",
+    "portpos",
+    "paystation",
+    "uddoktapay",
+    "moneybag",
+    "eps",
+    "dgepay",
+    "rocket",
+    "payment-gateway",
+    "bangladesh",
+    "bdt",
+    "mobile-banking",
+    "express",
+    "nextjs",
+    "nestjs",
+    "fastify",
+    "hono",
+    "typescript"
+  ],
+  "homepage": "https://bdpaygate.github.io/node/",
+  "bugs": "https://github.com/byteminus/bdpaygate-js/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byteminus/bdpaygate-js.git"
+  },
+  "license": "MIT",
+  "author": "ByteMinus",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./web": {
+      "import": {
+        "types": "./dist/adapters/web.d.ts",
+        "default": "./dist/adapters/web.js"
+      },
+      "require": {
+        "types": "./dist/adapters/web.d.cts",
+        "default": "./dist/adapters/web.cjs"
+      }
+    },
+    "./express": {
+      "import": {
+        "types": "./dist/adapters/express.d.ts",
+        "default": "./dist/adapters/express.js"
+      },
+      "require": {
+        "types": "./dist/adapters/express.d.cts",
+        "default": "./dist/adapters/express.cjs"
+      }
+    },
+    "./fastify": {
+      "import": {
+        "types": "./dist/adapters/fastify.d.ts",
+        "default": "./dist/adapters/fastify.js"
+      },
+      "require": {
+        "types": "./dist/adapters/fastify.d.cts",
+        "default": "./dist/adapters/fastify.cjs"
+      }
+    },
+    "./koa": {
+      "import": {
+        "types": "./dist/adapters/koa.d.ts",
+        "default": "./dist/adapters/koa.js"
+      },
+      "require": {
+        "types": "./dist/adapters/koa.d.cts",
+        "default": "./dist/adapters/koa.cjs"
+      }
+    },
+    "./hono": {
+      "import": {
+        "types": "./dist/adapters/hono.d.ts",
+        "default": "./dist/adapters/hono.js"
+      },
+      "require": {
+        "types": "./dist/adapters/hono.d.cts",
+        "default": "./dist/adapters/hono.cjs"
+      }
+    },
+    "./next": {
+      "import": {
+        "types": "./dist/adapters/next.d.ts",
+        "default": "./dist/adapters/next.js"
+      },
+      "require": {
+        "types": "./dist/adapters/next.d.cts",
+        "default": "./dist/adapters/next.cjs"
+      }
+    },
+    "./nestjs": {
+      "import": {
+        "types": "./dist/adapters/nestjs.d.ts",
+        "default": "./dist/adapters/nestjs.js"
+      },
+      "require": {
+        "types": "./dist/adapters/nestjs.d.cts",
+        "default": "./dist/adapters/nestjs.cjs"
+      }
+    },
+    "./nuxt": {
+      "import": {
+        "types": "./dist/adapters/nuxt.d.ts",
+        "default": "./dist/adapters/nuxt.js"
+      },
+      "require": {
+        "types": "./dist/adapters/nuxt.d.cts",
+        "default": "./dist/adapters/nuxt.cjs"
+      }
+    },
+    "./sveltekit": {
+      "import": {
+        "types": "./dist/adapters/sveltekit.d.ts",
+        "default": "./dist/adapters/sveltekit.js"
+      },
+      "require": {
+        "types": "./dist/adapters/sveltekit.d.cts",
+        "default": "./dist/adapters/sveltekit.cjs"
+      }
+    },
+    "./react-router": {
+      "import": {
+        "types": "./dist/adapters/react-router.d.ts",
+        "default": "./dist/adapters/react-router.js"
+      },
+      "require": {
+        "types": "./dist/adapters/react-router.d.cts",
+        "default": "./dist/adapters/react-router.cjs"
+      }
+    },
+    "./astro": {
+      "import": {
+        "types": "./dist/adapters/astro.d.ts",
+        "default": "./dist/adapters/astro.js"
+      },
+      "require": {
+        "types": "./dist/adapters/astro.d.cts",
+        "default": "./dist/adapters/astro.cjs"
+      }
+    },
+    "./adonis": {
+      "import": {
+        "types": "./dist/adapters/adonis.d.ts",
+        "default": "./dist/adapters/adonis.js"
+      },
+      "require": {
+        "types": "./dist/adapters/adonis.d.cts",
+        "default": "./dist/adapters/adonis.cjs"
+      }
+    },
+    "./node": {
+      "import": {
+        "types": "./dist/adapters/node.d.ts",
+        "default": "./dist/adapters/node.js"
+      },
+      "require": {
+        "types": "./dist/adapters/node.d.cts",
+        "default": "./dist/adapters/node.cjs"
+      }
+    },
+    "./stores/sql": {
+      "import": {
+        "types": "./dist/stores/sql.d.ts",
+        "default": "./dist/stores/sql.js"
+      },
+      "require": {
+        "types": "./dist/stores/sql.d.cts",
+        "default": "./dist/stores/sql.cjs"
+      }
+    },
+    "./stores/prisma": {
+      "import": {
+        "types": "./dist/stores/prisma.d.ts",
+        "default": "./dist/stores/prisma.js"
+      },
+      "require": {
+        "types": "./dist/stores/prisma.d.cts",
+        "default": "./dist/stores/prisma.cjs"
+      }
+    },
+    "./stores/mongodb": {
+      "import": {
+        "types": "./dist/stores/mongodb.d.ts",
+        "default": "./dist/stores/mongodb.js"
+      },
+      "require": {
+        "types": "./dist/stores/mongodb.d.cts",
+        "default": "./dist/stores/mongodb.cjs"
+      }
+    },
+    "./cache/redis": {
+      "import": {
+        "types": "./dist/cache/redis.d.ts",
+        "default": "./dist/cache/redis.js"
+      },
+      "require": {
+        "types": "./dist/cache/redis.d.cts",
+        "default": "./dist/cache/redis.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "web": [
+        "./dist/adapters/web.d.cts"
+      ],
+      "express": [
+        "./dist/adapters/express.d.cts"
+      ],
+      "fastify": [
+        "./dist/adapters/fastify.d.cts"
+      ],
+      "koa": [
+        "./dist/adapters/koa.d.cts"
+      ],
+      "hono": [
+        "./dist/adapters/hono.d.cts"
+      ],
+      "next": [
+        "./dist/adapters/next.d.cts"
+      ],
+      "nestjs": [
+        "./dist/adapters/nestjs.d.cts"
+      ],
+      "nuxt": [
+        "./dist/adapters/nuxt.d.cts"
+      ],
+      "sveltekit": [
+        "./dist/adapters/sveltekit.d.cts"
+      ],
+      "react-router": [
+        "./dist/adapters/react-router.d.cts"
+      ],
+      "astro": [
+        "./dist/adapters/astro.d.cts"
+      ],
+      "adonis": [
+        "./dist/adapters/adonis.d.cts"
+      ],
+      "node": [
+        "./dist/adapters/node.d.cts"
+      ],
+      "stores/sql": [
+        "./dist/stores/sql.d.cts"
+      ],
+      "stores/prisma": [
+        "./dist/stores/prisma.d.cts"
+      ],
+      "stores/mongodb": [
+        "./dist/stores/mongodb.d.cts"
+      ],
+      "cache/redis": [
+        "./dist/cache/redis.d.cts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "prisma",
+    "sql"
+  ],
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check:package": "publint --strict && attw --pack .",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm test && npm run build && npm run check:package"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@biomejs/biome": "^2.5.15",
+    "@electric-sql/pglite": "^0.5.10",
+    "@koa/bodyparser": "^6.1.0",
+    "@types/express": "^5.0.6",
+    "@types/koa": "^3.0.3",
+    "@types/node": "^22.20.5",
+    "express": "^5.3.0",
+    "fastify": "^5.12.7",
+    "hono": "^4.13.13",
+    "koa": "^3.2.1",
+    "publint": "^0.3.25",
+    "tsdown": "^0.23.1",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  }
+}
